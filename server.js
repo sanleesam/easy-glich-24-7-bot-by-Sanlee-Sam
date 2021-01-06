@@ -1,15 +1,15 @@
-const Discord = require('discord.js'); //Needed discord.js module
-const client = new Discord.Client(); //Creating Discord new client
+const Discord = require('discord.js'); 
+const client = new Discord.Client(); 
 
-client.once('ready', () => { //When bot is ready , bot will run given code
-	console.log('Ready!'); //Sends Ready to console as message
-  client.user.setActivity(`I am Devil`); //Sets bot activity as "I am Devil" 
+client.once('ready', () => { 
+	console.log('Ready!'); 
+  client.user.setActivity(`YOUR_CUSTOM_STATUS_GOES_HERE`); 
 });
 
-client.on("message", message => { //when Someone message 
-  if(message.content === "!ping") { //if message is same as !ping
-    return message.channel.send(`Pong ${client.ws.ping}`); //it will return message
+client.on("message", message => {  
+  if(message.content === "!ping") { 
+    return message.channel.send(`Pong ${client.ws.ping}`); 
   }
 });
 
-client.login('your-token-goes-here'); //Paste Your Bot Token
+client.login('your-token-goes-here');
